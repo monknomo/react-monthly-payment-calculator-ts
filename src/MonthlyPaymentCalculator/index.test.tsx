@@ -8,6 +8,7 @@ it('renders without crashing', () => {
   //ReactDOM.render(<MonthlyPaymentCalculator  vehiclePrice={25000} tax={10.4} fees={242}/>, div);
   //ReactDOM.unmountComponentAtNode(div);
   //expect(div).toMatchSnapshot();
-  const tree = create(<div></div>).toJSON();
+  const tree = create(<MonthlyPaymentCalculator  vehiclePrice={25000} tax={10.4} fees={242}/>).toJSON();
   expect(tree).toMatchSnapshot();
+  
 });

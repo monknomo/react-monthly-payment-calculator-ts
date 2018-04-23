@@ -1,3 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders without crashing 1`] = `<div />`;
+exports[`renders without crashing 1`] = `
+<form>
+  <div>
+    <h1>
+      Car Loan Monthly Payment Calculator
+    </h1>
+  </div>
+  <div>
+    
+  </div>
+  <div>
+    Vehicle Price: $
+    25000
+  </div>
+  <div>
+    <label
+      htmlFor="downPayment"
+    >
+      Down Payment: 
+    </label>
+    <input
+      id="monthlyPaymentCalculator-downPayment"
+      mask=""
+      name="downPayment"
+      onChange={[Function]}
+      required={true}
+      value="0"
+    />
+  </div>
+  <div>
+    <label
+      htmlFor="apr"
+    >
+      APR: 
+    </label>
+    <input
+      mask={
+        Array [
+          /\\\\d/,
+          /\\\\d/,
+          ".",
+          /\\\\d/,
+          /\\\\d/,
+          "%",
+        ]
+      }
+      name="apr"
+      onChange={[Function]}
+      required={true}
+      value="0450"
+    />
+  </div>
+  <div>
+    <label
+      htmlFor="term"
+    >
+      Term: 
+    </label>
+    <select
+      id="monthlyPaymentCalculator-term"
+      name="term"
+      onChange={[Function]}
+      value="60"
+    >
+      <option
+        value="24"
+      >
+        24 Month Term
+      </option>
+      <option
+        value="36"
+      >
+        36 Month Term
+      </option>
+      <option
+        value="48"
+      >
+        48 Month Term
+      </option>
+      <option
+        value="60"
+      >
+        60 Month Term
+      </option>
+    </select>
+  </div>
+  <div>
+    <h2>
+      Estimated Payment
+    </h2>
+    <div>
+      Tax Rate: 
+      10.4
+      %
+    </div>
+    <div>
+      Total Tax: $
+      2600
+    </div>
+    <div>
+      Fees: $
+      242
+    </div>
+    <div>
+      Principal: $
+      27842
+    </div>
+    <hr />
+    <div>
+      Monthly Payment: $
+      577.95
+    </div>
+  </div>
+</form>
+`;
