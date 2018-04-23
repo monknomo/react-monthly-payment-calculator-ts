@@ -6,6 +6,8 @@ Setup
 
 To install, run `npm install`
 
+To test, run `npm run test`
+
 To run, run `npm run start`
 
 To build for a production deploy (which I recommend against, at this point), run `npm run build`
