@@ -41,7 +41,7 @@ export default class LoanModel {
   }
 
   public calculateMonthlyInterest(): number{
-    debugger;
+
     if(this.loanModel.apr === null || this.loanModel.apr === undefined || isNaN(this.loanModel.apr) ){
       throw new Error("APR is required");
     }
@@ -130,7 +130,7 @@ export default class LoanModel {
   }
 
   public downPaymentLessThanPrice(loanModel: ILoanModel, errors: string[]): void{
-    debugger;
+
     if(loanModel.downPayment && loanModel.downPayment > loanModel.vehiclePrice){
       errors.push("Down payment must be less than vehicle price\n");
     }
