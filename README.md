@@ -18,6 +18,6 @@ This app calculates what your monthly loan payment would be, given a vehicle pri
 Design
 -------
 
-The meat of the logic is in src/MonthlyPaymentCalculator/PaymentMath.ts.  This class models a loan and calculates various properties of the loan, such as the principal and the monthly payment.  The view is src/MonthlyPaymentCalculator/MonthlyPaymentCalculator.tsx.  I attempted to make this a fairly dumb view.  I thought about abstracting out the input handling to another class, but that seemed like overkill in this context.  As it is, the inputs are fed into the PaymentMath calculator and the screen is updated as the user plays with the parameters.
+The meat of the logic is in src/MonthlyPaymentCalculator/LoanModel.ts.  This class models a loan and calculates various properties of the loan, such as the principal and the monthly payment.  The view is src/MonthlyPaymentCalculator/index.tsx.  I attempted to make this a fairly dumb view.  I thought about abstracting out the input handling to another class, but that seemed like overkill in this context.  As it is, the inputs are fed into the LoanModel calculator and the screen is updated as the user plays with the parameters.
 
 I went back and forth on what the best presentation for this information is.  Since this is ultimately a coding exercise, I decided plain is ok.  I included a text masking library to assist entering dollar amounts and percentages, because I find those useful to call out to the user.

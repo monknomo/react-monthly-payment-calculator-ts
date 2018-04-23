@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import MonthlyPaymentCalculator from './MonthlyPaymentCalculator';
+import MonthlyPaymentCalculator from './index';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

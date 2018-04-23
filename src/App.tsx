@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.css';
-import MonthlyPaymentCalculator from './MonthlyPaymentCalculator/MonthlyPaymentCalculator';
+import MonthlyPaymentCalculator from './MonthlyPaymentCalculator';
 
 class App extends React.Component {
   public render() {

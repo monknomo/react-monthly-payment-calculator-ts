@@ -1,6 +1,6 @@
 import ILoanModel from './ILoanModel';
 
-export default class PaymentMath {
+export default class LoanModel {
 
   public static precisionRound(unroundedNumber: number, precision:number ): number {
     const factor = Math.pow(10, precision);
@@ -26,17 +26,17 @@ export default class PaymentMath {
       throw new Error("Loan term is required");
     }
     if(monthlyInterestRate ===0){
-      return PaymentMath.precisionRound(principal / this.loanModel.term, 2);
+      return LoanModel.precisionRound(principal / this.loanModel.term, 2);
     }
     const payment =  (monthlyInterestRate*principal) / (1-Math.pow((1+monthlyInterestRate), -1*this.loanModel.term));
-    return PaymentMath.precisionRound(payment, 2);
+    return LoanModel.precisionRound(payment, 2);
   }
 
   public calculatePrincipal(): number {
     if(this.loanModel.downPayment){
-      return PaymentMath.precisionRound((this.loanModel.vehiclePrice * (1 + this.loanModel.tax / 100) +this.loanModel.fees)-this.loanModel.downPayment, 2);
+      return LoanModel.precisionRound((this.loanModel.vehiclePrice * (1 + this.loanModel.tax / 100) +this.loanModel.fees)-this.loanModel.downPayment, 2);
     }
-    return PaymentMath.precisionRound(this.loanModel.vehiclePrice * (1 + this.loanModel.tax / 100) +this.loanModel.fees, 2);
+    return LoanModel.precisionRound(this.loanModel.vehiclePrice * (1 + this.loanModel.tax / 100) +this.loanModel.fees, 2);
 
   }
 

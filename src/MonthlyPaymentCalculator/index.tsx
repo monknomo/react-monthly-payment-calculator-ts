@@ -2,7 +2,7 @@ import * as React from 'react';
 import MaskedInput from 'react-text-mask';
 import {createNumberMask} from 'text-mask-addons';
 import ILoanModel from './ILoanModel';
-import PaymentMath from './PaymentMath';
+import LoanModel from './LoanModel';
 
 interface IMonthlyPaymentCalculatorProps {
   vehiclePrice: number,
@@ -50,7 +50,7 @@ export default class MonthlyPaymentCalculator extends React.Component<IMonthlyPa
     let monthlyPayment: number = 0;
     let principal: number = 0;
     try{
-      const paymentMath: PaymentMath = new PaymentMath(loanModel);
+      const paymentMath: LoanModel = new LoanModel(loanModel);
       monthlyPayment = paymentMath.calculateMonthlyPayment();
       principal = paymentMath.calculatePrincipal();
     }catch(e){
